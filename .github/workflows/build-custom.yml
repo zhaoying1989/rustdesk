@@ -13,10 +13,18 @@ jobs:
         with:
           submodules: true
       
+      - name: Setup Visual Studio
+        uses: microsoft/setup-msbuild@v2
+      
+      - name: Add MSBuild to PATH
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.x'
+      
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.41.2'  # 使用更高版本
+          flutter-version: '3.41.2'
           channel: 'stable'
       
       - name: Build Windows
@@ -45,7 +53,7 @@ jobs:
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.41.2'  # 使用更高版本
+          flutter-version: '3.41.2'
           channel: 'stable'
       
       - name: Install deps
@@ -79,7 +87,7 @@ jobs:
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.41.2'  # 使用更高版本 
+          flutter-version: '3.41.2'
           channel: 'stable'
       
       - name: Build macOS
