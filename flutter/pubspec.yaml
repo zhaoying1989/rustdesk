@@ -19,7 +19,7 @@ publish_to: "none" # Remove this line if you wish to publish to pub.dev
 version: 1.4.0+58
 
 environment:
-  sdk: '^3.1.0'
+  sdk: '^3.5.0'  # 修改这里：从 '^3.1.0' 改为 '^3.5.0'
 
 dependencies:
   flutter:
@@ -70,7 +70,7 @@ dependencies:
   desktop_drop: ^0.4.4
   scroll_pos: ^0.4.0
   debounce_throttle: ^2.0.0
-  file_picker: ^5.1.0
+  file_picker: ^8.0.0  # 修改这里：从 ^5.1.0 改为 ^8.0.0
   flutter_svg: ^2.0.5
   uni_links:
     git:
@@ -118,6 +118,7 @@ dev_dependencies:
 
 dependency_overrides:
   intl: ^0.19.0
+  file_picker: ^8.0.0  # 添加这行
   
 # rerun: flutter pub run flutter_launcher_icons
 flutter_icons:
@@ -193,4 +194,3 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
-
